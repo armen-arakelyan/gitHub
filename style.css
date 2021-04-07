@@ -1,3 +1,8 @@
+body{
+    height: 100%;
+    margin:0;
+    padding: 0;
+}
 nav{
     display: flex;
     justify-content: space-around;
@@ -20,6 +25,9 @@ nav{
 .nav-content li{
     padding-left:25px;
 }
+.nav-content span{
+    display: none;
+}
 main{
     background-image: url('img/bg.jpg');
     background-size: cover;
@@ -33,8 +41,26 @@ main{
     align-items: center;
     font-size:26px;
     color:white;
+    width:100%;
+    height:100%;
+    justify-content: center;
 }
 .main-text b{
     font-size: 40px;
-    margin-top: 20%;
+}
+@media only screen and (max-width:750px) {
+    .nav-content li{
+        display: none;
+    }
+    .nav-content span{
+        display: block;
+    }
+}
+@media only screen and (max-width:550px){
+    .main-text{
+        font-size: 15px;
+    }
+    .main-text b{
+        font-size:25px;
+    }
 }
